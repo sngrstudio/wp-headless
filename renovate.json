@@ -5,6 +5,10 @@
     {
       "matchPackageNames": ["php"],
       "rangeStrategy": "replace"
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "commitBody": "[skip ci]"
     }
   ]
 }
