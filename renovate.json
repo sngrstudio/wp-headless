@@ -1,0 +1,10 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>sngrstudio/renovate-config"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["php"],
+      "rangeStrategy": "replace"
+    }
+  ]
+}
