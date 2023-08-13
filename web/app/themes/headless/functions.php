@@ -2,8 +2,9 @@
     function register_my_menus() {
         register_nav_menus(
         array(
-            'header-menu' => __( 'Header Menu' ),
-            'extra-menu' => __( 'Extra Menu' )
+            'primary-menu' => __( 'Primary Menu' ),
+            'secondary-menu' => __( 'Secondary Menu' ),
+            'tertiary-menu' => __( 'Tertiary Menu' )
         )
         );
     }
