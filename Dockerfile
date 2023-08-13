@@ -7,7 +7,10 @@ RUN composer install --no-dev --ignore-platform-reqs
 FROM php:8.2.7-apache AS runtime
 
 RUN a2enmod rewrite
-RUN docker-php-ext-install mysqli
+
+ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
+RUN chmod +x /usr/local/bin/install-php-extensions && \
+    install-php-extensions mysqli gd
 
 WORKDIR /var/www/html
 COPY server/php.ini $PHP_INI_DIR/php.ini
