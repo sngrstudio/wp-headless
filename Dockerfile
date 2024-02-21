@@ -1,10 +1,10 @@
-FROM composer:2.2.21 AS deps
+FROM composer:2.7.1 AS deps
 
 WORKDIR /app
 COPY composer.* .
 RUN composer install --no-dev --ignore-platform-reqs
 
-FROM php:8.2.7-apache AS runtime
+FROM php:8.3.3-apache AS runtime
 
 RUN a2enmod rewrite
 
